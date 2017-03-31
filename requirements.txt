@@ -5,8 +5,10 @@ scipy
 python-dateutil==2.2
 requests
 six==1.7.3
-eventsourcing#==0.9.3
-cassandra-driver#==3.8.1
+eventsourcing
+#eventsourcing==0.9.3
+cassandra-driver
+#cassandra-driver==3.8.1
 sqlalchemy
 filelock
 gevent==1.1rc3
