@@ -1,8 +1,5 @@
-import datetime
 
-
-__version__ = '0.2.0'
-
+__version__ = '0.3.0'
 
 # Todo: Warning when a built-in is being overridden by a user defined function. Or perhaps that would be useful? In any case, make sure this is handled properly (currently the user defined function will just be ignore?).
 # Todo: Make price process create calibration params from market observations, as well as consume the calibration parameters.
@@ -48,33 +45,6 @@ __version__ = '0.2.0'
 # Todo: Move these todos to an issue tracker.
 
 # Note on how to install matplotlib in virtualenv: http://www.stevenmaude.co.uk/2013/09/installing-matplotlib-in-virtualenv.html
-
-try:
-    import pytz
-except ImportError:
-    pytz = None
-
-class UTC(datetime.tzinfo):
-    """
-    UTC implementation taken from Python's docs.
-
-    Used only when pytz isn't available.
-    """
-    ZERO = datetime.timedelta(0)
-
-    def __repr__(self):
-        return "<UTC>"
-
-    def utcoffset(self, dt):
-        return self.ZERO
-
-    def tzname(self, dt):
-        return "UTC"
-
-    def dst(self, dt):
-        return self.ZERO
-
-utc = pytz.utc if pytz else UTC()
 
 
 
